@@ -11,7 +11,7 @@ import junit.framework.Assert;
 public class TestJob {
 
 	@Test
-	public void getAllJob(){
+	public void getJob(){
 		SqlSession session = MyBatisUtil.getSession();
 		JobDAO jobdao = session.getMapper(JobDAO.class);
 		int count = jobdao.getJob();
@@ -20,6 +20,6 @@ public class TestJob {
 	
 	public static void main(String[] args){
 		TestJob test = new TestJob();
-		test.getAllJob();
+		test.getJob();
 	}
 }

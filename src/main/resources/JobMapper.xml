@@ -6,4 +6,8 @@
 	<select id="getJob" resultType="Integer">
 		select count(*) as cnt from job;
 	</select>
+	
+	<select id="getAllJob" resultType="com.myspring.bean.Job">
+		select * from job;
+	</select>
 </mapper>
