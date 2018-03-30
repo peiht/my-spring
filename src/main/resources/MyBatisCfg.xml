@@ -16,7 +16,7 @@
             </dataSource>
         </environment>
     </environments>
-    <!-- <mappers>
+    <mappers>
         <mapper resource="JobMapper.xml" />
-    </mappers> -->
+    </mappers>
 </configuration>

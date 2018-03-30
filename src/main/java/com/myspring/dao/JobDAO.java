@@ -1,5 +1,7 @@
 package com.myspring.dao;
 
+import java.util.List;
+
 import com.myspring.bean.Job;
 
 public interface JobDAO {
@@ -18,5 +20,5 @@ public interface JobDAO {
 	 * @since: (开始使用的版本)
 	 * @return
 	 */
-	public Job getAllJob();
+	public List<Job> getAllJob();
 }

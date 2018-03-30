@@ -1,5 +1,7 @@
 package com.myspring.test;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
@@ -20,15 +22,19 @@ public class TestJob {
 	}
 	
 	@Test
-	public Job getAllJob() {
+	public List<Job> getAllJob() {
 	    SqlSession session = MyBatisUtil.getSession();
 	    JobDAO jobDAO = session.getMapper(JobDAO.class);
-	    Job job = jobDAO.getAllJob();
+	    List<Job> job = jobDAO.getAllJob();
 	    return job;
 	}
 	
 	public static void main(String[] args){
 		TestJob test = new TestJob();
-		test.getJob();
+		List<Job> jobs = test.getAllJob();
+		for(int i=0;i<jobs.size();i++) {
+		    Job job = jobs.get(i);
+		    System.out.println(job.getJobCompany());
+		}
 	}
 }

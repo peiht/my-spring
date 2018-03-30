@@ -11,7 +11,7 @@
           http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!-- 配置扫描的包 -->
+    <!-- 配置扫描的包，包括service和controller -->
     <context:component-scan base-package="com.myspring.controller"/>
     <context:component-scan base-package="com.myspring.service"/>
     <!-- 	<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/> -->
